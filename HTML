@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QR Delivery ASWA</title>
+  <title>Afiche QR Negocio</title>
   <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
   <style>
     body {
@@ -56,8 +56,8 @@
   </style>
 </head>
 <body>
-  <!-- Logo de ASWA -->
-  <img src="logo-aswa.jpg" alt="Logo ASWA" class="logo">
+  <!-- Logo del negocio -->
+  <img src="logo de aswa.jpg" alt="Logo ASWA" class="logo">
 
   <!-- Encabezado -->
   <h1>La rica chicha ASWA</h1>
@@ -80,7 +80,7 @@
       width: 250,
       height: 250,
       data: "https://jsangama.github.io/aswa", // enlace del negocio
-      image: "logo-aswa.jpg", // logo incrustado en el QR
+      image: "logo de aswa.jpg", // tu logo en formato .jpg
       dotsOptions: {
         color: "#000000",
         type: "square"
@@ -96,7 +96,7 @@
 
     qrCode.append(document.getElementById("qrcode"));
 
-    // Función para descargar el QR como imagen
+    // Botón para descargar el QR como imagen
     document.getElementById("download").addEventListener("click", () => {
       qrCode.download({ name: "qr-aswa", extension: "png" });
     });
