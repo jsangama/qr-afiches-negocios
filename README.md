@@ -9,7 +9,8 @@ Cada archivo tendrá su propio logo y enlace QR.
 1. Ve a la configuración del repositorio en GitHub.
 2. Activa **GitHub Pages** en la rama `main` y carpeta raíz.
 3. Obtendrás una URL pública, por ejemplo:  
-   `https://tuusuario.github.io/qr-afiches-negocios`
+   `[https://tuusuario.github.io/qr-afiches-negocios](https://jsangama.github.io/qr-afiches-negocios/
+)`
 
 Cualquier persona que escanee el QR abrirá esa URL.
 
