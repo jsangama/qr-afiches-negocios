@@ -1,95 +1,105 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>QR Delivery ASWA</title>
-<style>
-
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    background:#f0f0f0;
-}
-
-/* CONTENEDOR PRINCIPAL */
-.banner{
-    width:800px;
-    height:1200px;
-    background: url('Gotas brillantes sobre fondo amarillo.png') center/cover;
-    position:relative;
-    overflow:hidden;
-    text-align:center;
-}
-
-/* LOGO */
-.logo{
-    width:350px;
-    margin-top:60px;
-}
-
-/* QR BOX */
-.qr-container{
-    background:white;
-    width:500px;
-    padding:30px;
-    border-radius:30px;
-    margin:40px auto;
-}
-
-.qr{
-    width:100%;
-}
-
-/* BOTON */
-.boton{
-    background:#1a9d8f;
-    color:white;
-    padding:20px;
-    border-radius:50px;
-    width:400px;
-    margin:20px auto;
-    font-size:28px;
-    font-weight:bold;
-}
-
-/* TEXTO FINAL */
-.frase{
-    font-size:60px;
-    color:#0a7d2f;
-    font-weight:bold;
-    margin-top:30px;
-}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afiche QR Negocio</title>
+  <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+  <style>
+    body {
+      background: #facc15;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    .logo {
+      width: 160px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      color: #1e293b;
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    h3 {
+      color: #065f46;
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+    }
+    #qrcode {
+      margin: 0 auto 1.5rem;
+    }
+    .cta {
+      background: #14b8a6;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .download-btn {
+      background: #1e40af;
+      color: white;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+    .footer {
+      color: #065f46;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+  </style>
 </head>
-
 <body>
+  <!-- Logo del negocio -->
+  <img src="logo de aswa.jpg" alt="Logo ASWA" class="logo">
 
-<div class="banner">
+  <!-- Encabezado -->
+  <h1>La rica chicha ASWA</h1>
+  <h3>El sabor de mi tierra 🍹</h3>
 
-    <!-- CAMBIA EL LOGO -->
-    <img src="logo de aswa.jpg" class="logo">
+  <!-- QR con logo incrustado -->
+  <div id="qrcode"></div>
 
-    <!-- QR -->
-    <div class="qr-container">
-        <img src="qr-aswa.jpg" class="qr">
-    </div>
+  <!-- Botón llamativo -->
+  <div class="cta">📱 Escanea aquí y pide tu delivery</div>
 
-    <!-- TEXTO EDITABLE -->
-    <div class="boton">
-       📱 Escanea aquí y pide tu delivery
-    </div>
+  <!-- Botón de descarga -->
+  <button class="download-btn" id="download">⬇️ Descargar QR</button>
 
-    <!-- FRASE EDITABLE -->
-    <div class="frase">
-        El oro líquido de selva.
-    </div>
+  <!-- Eslogan final -->
+  <div class="footer">El oro líquido de la selva</div>
 
-</div>
+  <script>
+    const qrCode = new QRCodeStyling({
+      width: 250,
+      height: 250,
+      data: "https://jsangama.github.io/aswa", // enlace del negocio
+      image: "logo de aswa.jpg", // tu logo en formato .jpg
+      dotsOptions: {
+        color: "#000000",
+        type: "square"
+      },
+      backgroundOptions: {
+        color: "#ffffff"
+      },
+      imageOptions: {
+        crossOrigin: "anonymous",
+        margin: 5
+      }
+    });
 
+    qrCode.append(document.getElementById("qrcode"));
+
+    // Botón para descargar el QR como imagen
+    document.getElementById("download").addEventListener("click", () => {
+      qrCode.download({ name: "qr-aswa", extension: "png" });
+    });
+  </script>
 </body>
 </html>
