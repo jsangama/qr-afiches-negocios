@@ -1,28 +1,30 @@
-# Generador de Afiches QR para Negocios
 
-Este proyecto es una **plantilla HTML reutilizable** para crear afiches promocionales con códigos QR escaneables.  
-Cada afiche incluye:
-- Logo del negocio
-- Slogan personalizado
-- Código QR real que apunta a un enlace (ejemplo: página web, menú, tienda online)
-- Botón llamativo de escaneo
-- Eslogan final
+Puedes crear más archivos HTML para distintos negocios, por ejemplo:
+- `cafeteria.html`
+- `ropa.html`
 
-## 🚀 Cómo usar la plantilla
+Cada archivo tendrá su propio logo y enlace QR.
 
-1. Clona o descarga este repositorio.
-2. Abre el archivo `index.html` en tu editor de código.
-3. Personaliza:
-   - **Logo**: reemplaza `logo-aswa.png` por el logo de tu negocio.
-   - **Slogan**: edita el texto en `<h3>` y en el footer.
-   - **Enlace QR**: cambia la línea en el script:
-     ```js
-     data: "https://tu-enlace.com"
-     ```
-     por el enlace de tu negocio.
-4. Guarda los cambios.
-5. Abre el archivo en tu navegador para ver el afiche.
-6. Activa **GitHub Pages** en la configuración del repositorio para publicar tu afiche online.
+## 🌐 Publicación con GitHub Pages
 
-## 📂 Estructura del proyecto
+1. Ve a la configuración del repositorio en GitHub.
+2. Activa **GitHub Pages** en la rama `main` y carpeta raíz.
+3. Obtendrás una URL pública, por ejemplo:  
+   `https://tuusuario.github.io/qr-afiches-negocios`
 
+Cualquier persona que escanee el QR abrirá esa URL.
+
+## ✨ Ejemplo
+
+- **Negocio:** ASWA  
+- **Slogan:** "El sabor de mi tierra"  
+- **Enlace QR:** `https://jsangama.github.io/aswa`  
+
+El afiche mostrará el logo de ASWA, el QR escaneable y los textos promocionales.
+
+---
+
+### ✅ Conclusión
+Con este README, tu repositorio será claro y fácil de usar tanto para ti como para otros emprendedores.  
+
+👉 ¿Quieres que te prepare también un ejemplo de **index.html genérico** (sin marca específica) para que lo uses como plantilla base y solo reemplaces logo, slogan y enlace?
